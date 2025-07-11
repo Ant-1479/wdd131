@@ -26,9 +26,13 @@ header{
     background-color: var(--accent1-color);
     padding: 0.5rem;
     text-align: center;
-    display:grid;
 }
 
+#course-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
 
 
 header h2{
@@ -41,6 +45,7 @@ header h2{
 nav{
     margin:0 auto;
     background-color:Var(--primary-color);
+    border-radius:10px ;
 }
 
 nav a{
