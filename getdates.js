@@ -4,8 +4,7 @@
     const now = new Date();
     const currentYear = now.getFullYear();
 
-  
-    const options = { year: '2025', month: 'July', day: '8' };
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = now.toLocaleDateString(undefined, options);
 
 
@@ -14,9 +13,10 @@
       copyrightEl.innerHTML = `&copy; ${currentYear} Obeng Antwiwaah Stephanie. All rights reserved. Date: ${formattedDate}`;
     }
 
+    
     const lastModified = document.lastModified;
     const dateEl = document.getElementById("date");
     if (dateEl) {
-      dateEl.textContent = formattedDate;
+      dateEl.textContent = `Last Modified: ${lastModified}`;
     }
   
