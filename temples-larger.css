@@ -1,0 +1,59 @@
+@media screen and (max-width:600px){ 
+    header{
+        text-align:center;
+        grid-template-columns:1fr ;
+        padding: 10px;
+    }
+    header h1{
+        font-size:20px;
+        margin:10px 0;
+    }
+    
+   #nav li{
+    display:none;
+    flex-direction:column;
+    padding:10px;
+    background-color: black;
+    border-radius: 10px; }
+
+    #nav li.show{
+        display:flex;
+    }
+
+    #nav li a {
+        margin:10px 0;
+        text-align:center;
+    }
+    main{
+        padding:0.5rem;
+    }
+    main h1{
+        font-size:1.2rem;
+        text-align:center;
+        margin:8px;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr;
+        gap:15px;
+    }
+    figure{
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+    }
+
+    figure img{
+        width:100%;
+        height:auto;
+        border-radius:10px;
+    }
+    figcaption{
+        font-size:0.9rem;
+        padding:5px;
+
+    }
+   .Hamburger {
+        display:block;
+    }
+}

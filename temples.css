@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #4C6085;
+	--secondary-color: #39A0ED;
+	--accent1-color: #36F1CD;
+	--accent2-color: #13C4A3 #32322C;
+
+    --heading-font: "Lexend", sans-serif;  
+    --paragraph-font: "Roboto"; 
+}
+
+body {
+font-family: var(--paragraph-font);
+
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+.Hamburger{
+    display:none;
+    font-size:2rem;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+    padding:10px;
+
+    
+}
+header {
+    background-color: var(--accent1-color);
+   background-color:#36F1CD;
+      display: grid;
+      grid-template-columns: 150px auto;
+      align-items: center;
+}
+
+header h1{
+    margin:5px 0px;
+    padding:10px;
+    text-align: center;
+}
+
+ #nav{
+    margin:0 auto;
+    background-color:#39A0ED;
+    
+    border-radius: 20px;
+    
+
+    
+}
+#nav ul{
+    display:flex;
+    justify-content:space-around;
+}
+
+ #nav li a{
+    list-style: none;
+    padding: 2px;
+    text-decoration: none;
+    color: azure;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+#nav li{
+    list-style:none;
+    display:inline-block;
+    justify-content: space-around;
+    line-height: 30px;
+    width:120px;
+    height: 30px;
+    padding:0px  20px;
+    margin:10px;
+    font-size: 20px;
+
+}
+
+#nav li a:hover{
+    color: #36F1CD;
+}
+
+main{
+    max-width:100%;
+    margin:0 auto;
+    padding: 1rem;
+    background:#4C6085;
+}
+
+main h1{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin:10px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    max-width: 1000px;
+    margin:  auto;
+}
+
+figure {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    font-style: italic;
+    background-color: aqua;
+    border-radius: 50px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer{
+     background-color:#36F1CD;
+     text-align: center;
+     padding:0.5rem;
+}
