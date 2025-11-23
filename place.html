@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My country webpage">
+    <meta name="author" content="Antwiwaah Obeng Stephanie">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="place.css" rel="stylesheet" type="text/css">
+    <script src="place.js" defer></script>
+     
+<title>MY COUNTRY PAGE</title>
+</head>
+<body>
+    <header class="header">
+       <div class="brand">
+        <h1>GHANA</h1>
+        <p class="defer">Warm people <br> rich culture . beautiful landscapes.</p>
+       </div>
+    </header>
+    <main>
+    <section>
+        <section class="hero">
+      <picture>
+        <source media="(min-width:1200px)" srcset="Pictures/large.webp">
+        <source media="(min-width:700px)" srcset=>
+        <img src="Pictures/small.webp"
+             alt="Sunset at the Ghanaian coast"
+             class="hero-img">
+      </picture>
+        <div class="hero-overlay">
+        <h2>Welcome to Ghana</h2>
+        <p>From the busy markets of Accra to the calm beaches of Cape Coast — explore history, music, and tastes.</p>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <article class="left-col">
+        <h3>About Ghana</h3>
+        <p>Ghana is a West African country known for its rich heritage, vibrant culture, and warm climate. Explore landmarks such as Cape Coast Castle, Mole National Park, and Kwame Nkrumah Mausoleum.</p>
+
+        <h4>Highlights</h4>
+        <ul>
+          <li>Accra — Capital city with markets & nightlife</li>
+          <li>Cape Coast — Historic castles & beaches</li>
+          <li>Mole Park — Savannah wildlife safaris</li>
+        </ul>
+      </article>
+    </section>
+
+      <aside class="right-col weather-card" aria-labelledby="weather-heading">
+        <h3 id="weather-heading">Weather</h3>
+        <!-- For wide/desktop, we will display an emoticon via CSS ::after pseudo-element.
+             For mobile, show an inline SVG icon (file at images/weather-sun-cloud.svg) -->
+        <div class="weather-main">
+          <div class="weather-icon-mobile">
+            <!-- SVG used for mobile view (file provided in images/) -->
+            <img src="Pictures/weather.svg" alt="Partly cloudy icon" width="56" height="56">
+          </div>
+
+          <div class="weather-data">
+            <p><strong>Location:</strong> Accra</p>
+            <p><strong>Temperature:</strong> <span id="temp">28</span> °C</p>
+            <p><strong>Wind Speed:</strong> <span id="wind">12</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill">—</span></p>
+          </div>
+        </div>
+
+        <div class="weather-extra">
+          <p>Condition: Partly cloudy</p>
+          <p>Humidity: 72%</p>
+        </div>
+      </aside>
+    </section>
+
+     <footer class="footer">
+    <p>&copy; <span id="year"></span> Discover Ghana — All rights reserved.</p>
+    <p>Document last modified: <span id="last-modified"></span></p>
+  </footer>
+
+  </main>
+        
+    
+    </main>
+
+   
+</body>
+</html>
