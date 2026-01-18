@@ -21,125 +21,131 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
 
-.Hamburger{
-    display:none;
-    font-size:2rem;
-    background:none;
-    border:none;
-    color:white;
-    cursor:pointer;
-    padding:10px;
-
-    
-}
-header {
-    background-color: var(--accent1-color);
-   background-color:#36F1CD;
-      display: grid;
-      grid-template-columns: 150px auto;
-      align-items: center;
-}
-
-header h1{
-    margin:5px 0px;
-    padding:10px;
-    text-align: center;
-}
-
- #nav{
-    margin:0 auto;
-    background-color:#39A0ED;
-    
-    border-radius: 20px;
-    
-
-    
-}
-#nav ul{
-    display:flex;
-    justify-content:space-around;
-}
-
- #nav li a{
-    list-style: none;
-    padding: 2px;
-    text-decoration: none;
-    color: azure;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-}
-
-#nav li{
-    list-style:none;
-    display:inline-block;
-    justify-content: space-around;
-    line-height: 30px;
-    width:120px;
-    height: 30px;
-    padding:0px  20px;
-    margin:10px;
-    font-size: 20px;
-
-}
-
-#nav li a:hover{
-    color: #36F1CD;
-}
-
-main{
-    max-width:100%;
-    margin:0 auto;
-    padding: 1rem;
-    background:#4C6085;
-}
-
-main h1{
-    font-size: 1.5rem;
+header{
+    background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    margin:10px;
+    padding: 20px;
+}
+h1{
+    font-size: 1,5rem;
+    }
+
+    span {
+        color: var(--accent1-color);}
+
+    nav{
+        background-color: var(--secondary-color);
+        padding: 10px 0;
+        height: auto;
+        }
+
+    .nav-link {
+  flex-direction: column;
+  gap:5px;
+  position: absolute;
+  top:20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  display: none;
+}
+
+    
+    nav a{
+        color: aliceblue;
+        text-decoration: none;}
+
+
+     nav a:hover{
+        border: 2px solid var(--accent1-color);
+        padding: 5px;
+        margin-bottom: 10px;}
+
+
+    .nav-link a{
+                   color: #fff;
+                   padding: 12px;
+                   display: block;
+                  text-decoration: none;
+                  font-size: 20px;
+                }
+  
+    .nav-link.active{
+            display: flex;
+            
+    }
+        
+        
+    .Hamburger {
+                font-size: 28px;
+                background: none;
+                border: none;
+                color: #333;
+                cursor: pointer;
+                 padding: 10px;
+                 position: relative;
+                 
+}
+
+   .Hamburger span {
+                    
+                    width: 25px;
+                    height: 3px;
+                    margin: 5px;
+                    background-color: #333;
+                    transition: all 0.3s ease;
 }
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:10px;
-    max-width: 1000px;
-    margin:  auto;
+
+
+.Hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-figure {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+.Hamburger.active span:nth-child(2) {
+  opacity: 0;
 }
 
-figure:hover {
-    transform: scale(1.05);
+.Hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
+    
+main{
+    background:#13C4A3 ;
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 20px;
+    border:#39A0ED 2px solid;
+    border-radius: 15px;
+    }
 
-figcaption {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
-    font-style: italic;
-    background-color: aqua;
-    border-radius: 50px;
-}
+    .gallery{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:19px;
+        justify-items: center;
+    }  
 
-figure img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+    .gallery img{
+        width:100%;
+        height:auto;
+        border-radius: 20px;
+    }
 
-footer{
-     background-color:#36F1CD;
-     text-align: center;
-     padding:0.5rem;
-}
+    figcaption{
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 8px;
+        color:white;
+        box-shadow: #a5adac 0px 4px 6px -1px, #171818 0px 2px 4px -1px;
+    }
+
+    footer{
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }

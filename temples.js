@@ -1,3 +1,16 @@
+
+window.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-link');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+});
+
+
+
 const now = new Date();
     const currentYear = now.getFullYear();
 
@@ -16,11 +29,4 @@ const now = new Date();
     if (dateEl) {
       dateEl.textContent = `Last Modified: ${lastModified}`;}
 
-      const toggleBtn =
-      document .getElementsById("menu-toggle");
-      const navMenu=
-      document.querySelector("#nav li");
-
-      toggleBtn.addEventListener("click", ()=> {
-        navMenu.classList.toggle("show");
-      });
+     

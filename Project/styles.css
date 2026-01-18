@@ -42,26 +42,7 @@ body{
                  0 0 50px var(--accent-colour);
     transform: scale(1.1);
 }     
-.nav-row { display: flex; 
-    justify-content: space-around;
-     align-items: center; 
-     gap: var(--gap); }
 
-.main-nav ul { display: flex; 
-    gap: var(--gap); 
-    list-style: none;}
-
-.main-nav a { padding: 0.5rem 0.8rem; 
-    border-radius: 10px; 
-    color: var(--neutral-colour); 
-    background: var(--secondary-colour);
-    transition: 0.3s; 
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    }
 
 .main-nav a:hover, .main-nav a:active
 { background: var(--pink); outline: none; }
