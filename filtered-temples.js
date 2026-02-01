@@ -16,14 +16,16 @@ const now = new Date();
     if (dateEl) {
       dateEl.textContent = `Last Modified: ${lastModified}`;}
 
-      const toggleBtn =
-      document .getElementsById("menu-toggle");
-      const navMenu=
-      document.querySelector("#nav li");
+     window.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-link');
 
-      toggleBtn.addEventListener("click", ()=> {
-        navMenu.classList.toggle("show");
-      });
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+});
+
 
       const temples = [
   {
@@ -101,62 +103,41 @@ const now = new Date();
   }
 ];
 
-const container = document.getElementById("templesContainer");
+const container = document.querySelector("#templescontainer");
 
-temples.forEach(temple => {
-  const card = document.createElement("div");
-  card.className = "temple-card";
+function displayTemples(templeList) {
+  container.innerHTML = "";
 
-  card.innerHTML = `
-    <h2>${temple.name}</h2>
-    <p><strong>Location:</strong> ${temple.location}</p>
-    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-    <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-    <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy">
-  `;
-
-  container.appendChild(card);
-});
-
-
-document.getElementById('old').addEventListener('click', () => filterTemples('old'));
-document.getElementById('new').addEventListener('click', () => filterTemples('new'));
-document.getElementById('large').addEventListener('click', () => filterTemples('large'));
-document.getElementById('small').addEventListener('click', () => filterTemples('small'));
-document.getElementById('home').addEventListener('click', () => filterTemples('home'));
-function filterTemples(criteria) {
-  let filteredTemples = [];
-
-  if (criteria === 'old') {
-    filteredTemples = temples.filter(t => new Date(t.dedicated) < new Date('1900-01-01'));
-  } else if (criteria === 'new') {
-    filteredTemples = temples.filter(t => new Date(t.dedicated) > new Date('2000-01-01'));
-  } else if (criteria === 'large') {
-    filteredTemples = temples.filter(t => t.size > 90000);
-  } else if (criteria === 'small') {
-    filteredTemples = temples.filter(t => t.size < 10000);
-  } else {
-    filteredTemples = temples;
-  }
-
-  displayTemples(filteredTemples);
-}
-function displayTemples(temples) {
-  const container = document.getElementById("templesContainer");
-  container.innerHTML = ''; 
-
-  temples.forEach(temple => {
+  templeList.forEach(temple => {
     const card = document.createElement("div");
-    card.className = "temple-card";
+    card.classList.add("temple-card");
 
     card.innerHTML = `
+      <img src="${temple.imageUrl}" alt="${temple.templeName}">
       <h2>${temple.templeName}</h2>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+      <p>Location: ${temple.location}</p>
+      <p>Dedicated: ${temple.dedicated}</p>
+      <p>Area: ${temple.area.toLocaleString()} sq ft</p>
     `;
 
     container.appendChild(card);
   });
 }
+
+
+document.querySelector("#home").addEventListener("click", () => displayTemples(temples));
+document.querySelector("#old").addEventListener("click", () =>
+  displayTemples(temples.filter(t => t.dedicated < 1900))
+);
+  document.querySelector("#new").addEventListener("click", () =>
+  displayTemples(temples.filter(t => t.dedicated > 2000))
+);
+document.querySelector("#large").addEventListener("click", () =>
+  displayTemples(temples.filter(t => t.area > 100000))
+);
+document.querySelector("#small").addEventListener("click", () =>
+  displayTemples(temples.filter(t => t.area < 50000))
+);
+
+displayTemples(temples);
+

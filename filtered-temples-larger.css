@@ -1,59 +1,42 @@
-@media screen and (max-width:600px){ 
-    header{
-        text-align:center;
-        grid-template-columns:1fr ;
-        padding: 10px;
-    }
-    header h1{
-        font-size:20px;
-        margin:10px 0;
-    }
+@media (min-width:649px) {
+      body{
+        font-size: 18px;
+      }
+
+        h1{
+            font-size: 2.5rem;
+        }
+        .nav-link {
+            flex-direction: row;
+            position: static;
+            width: auto;
+            display: flex;
+            gap:50px;
+            justify-content: center;
+            font-family: var(--heading-font);
+            font-size: 30px;
+       
+        }
+            nav a:hover{
+                box-shadow: 20px 5px 5px var(--accent1-color);
+                padding: 0;
+                margin: 0;
+            }
+        .Hamburger {
+            display: none;
+        }
+        main{
+        background-color: aqua;
+        max-width: 100%;
+        }
+
+        
+        .gallery{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        overflow: visible;
+        }
+}        
     
-   #nav li{
-    display:none;
-    flex-direction:column;
-    padding:10px;
-    background-color: black;
-    border-radius: 10px; }
 
-    #nav li.show{
-        display:flex;
-    }
-
-    #nav li a {
-        margin:10px 0;
-        text-align:center;
-    }
-    main{
-        padding:0.5rem;
-    }
-    main h1{
-        font-size:1.2rem;
-        text-align:center;
-        margin:8px;
-    }
-
-    .grid-container{
-        grid-template-columns: 1fr;
-        gap:15px;
-    }
-    figure{
-        width:100%;
-        margin:0 auto;
-        text-align:center;
-    }
-
-    figure img{
-        width:100%;
-        height:auto;
-        border-radius:10px;
-    }
-    figcaption{
-        font-size:0.9rem;
-        padding:5px;
-
-    }
-   .Hamburger {
-        display:block;
-    }
-}
+    

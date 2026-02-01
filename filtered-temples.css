@@ -21,118 +21,143 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
 
-.Hamburger{
-    display:none;
-    font-size:2rem;
-    background:none;
-    border:none;
-    color:white;
-    cursor:pointer;
-    padding:10px;
-
-    
-}
-header {
-    background-color: var(--accent1-color);
-   background-color:#36F1CD;
-      display: grid;
-      grid-template-columns: 150px auto;
-      align-items: center;
-}
-
-header h1{
-    margin:5px 0px;
-    padding:10px;
-    text-align: center;
-}
-
- #nav{
-    margin:0 auto;
-    background-color:#39A0ED;
-    
-    border-radius: 20px;
-    
-
-    
-}
-#nav ul{
-    display:flex;
-    justify-content:space-around;
-}
-
- #nav li a{
-    list-style: none;
-    padding: 2px;
-    text-decoration: none;
-    color: azure;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-}
-
-#nav li{
-    list-style:none;
-    display:inline-block;
-    justify-content: space-around;
-    line-height: 30px;
-    width:120px;
-    height: 30px;
-    padding:0px  20px;
-    margin:10px;
-    font-size: 20px;
+header{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
 
 }
 
-#nav li a:hover{
-    color: #36F1CD;
-
-}
-
- nav button {
-      margin: 8px;
-      padding: 10px 20px;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      border-radius: 6px;
-      background-color: #007BFF;
-      color: white;
+h1{
+    font-size: 1,5rem;
     }
-main{
-    max-width:100%;
-    margin:0 auto;
-    padding: 1rem;
-    background:#4C6085;
+
+    span {
+        color: var(--accent1-color);}
+
+        
+
+    nav{
+        background-color: var(--secondary-color);
+        padding:1rem;
+        position:relative;
+        height: auto;
+          z-index: 10;
+        }
+
+        
+    .nav-link {
+  flex-direction: column;
+  position: absolute;
+  top:100%;
+  left: 0;
+  text-align: left;
+  list-style: none;
+  display: none;
+  width:100%;
 }
 
-main h1{
+ nav a{
+        color: aliceblue;
+        text-decoration: none;}
+
+
+     nav a:hover{
+        border: 2px solid var(--accent1-color);
+        padding: 5px;
+        margin-bottom: 10px;}
+
+
+    .nav-link a{
+                   color: #fff;
+                   padding: 5px;
+                   display: block;
+                  text-decoration: none;
+                  font-size: 15px;
+                }
+  
+    .nav-link.active{
+            display:block;
+             z-index: 15;
+            
+    }
+
+    .Hamburger {
+                font-size:5PX;
+                background: none;
+                border: none;
+                color: #333;
+                cursor: pointer;
+                 padding:5px;
+                 position: relative;
+                   z-index: 20;
+                 
+}
+
+  
+
+.Hamburger span {
+  display: block;
+  width:30px;
+  height: 3px;
+  background: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.Hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.Hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.Hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+    main{
+    background:#13C4A3 ;
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 20px;
+    border:#39A0ED 2px solid;
+    border-radius: 15px;
+    }
+
+    main h1{
     font-size: 1.5rem;
     color: white;
     text-align: center;
     margin:10px;
 }
 
+ .gallery{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:19px;
+        justify-items: center;
+    }  
 
- .temple-card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 16px;
-      margin: 12px;
-      width: 300px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .temple-card img {
-      max-width: 100%;
-      border-radius: 5px;
-    }
-    .temples-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+    .gallery img{
+        width:100%;
+        height:auto;
+        border-radius: 20px;
     }
 
-footer{
-     background-color:#36F1CD;
+.temple-card {
+  border: 1px solid #ccc;
+  padding:15px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+}
+
+footer{ background-color: var(--primary-color);
      text-align: center;
      padding:0.5rem;
 }
