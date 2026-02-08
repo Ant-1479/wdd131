@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color:#111;
-    color: #111;
+    color: #fffdfeec;
     margin: 0;
     padding: 0;
 }
@@ -27,7 +27,7 @@ body {
 
 
 .container {
-  background: #d8d0d4;
+  background: #0e0d0d;
   max-width: 650px;
   margin: 20px auto;
   padding: 25px;
