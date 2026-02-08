@@ -3,66 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form for Akos Fragrance">
+    <meta name="author" content="Obeng Antwiwaah Stephanie">
     <title>Product Review Form</title>
     <link href="form.css" rel="stylesheet" type="text/css">
     <script src="form.js" defer></script>
 
 </head>
 <body>
-    <header>
-        <h1>Product Review Form</h1>
-    </header>
 
-    <main>
-        <form id="reviewForm" method="get" action="review.html">
-            
-            <!-- Product Name -->
-            <label for="product">Product Name:</label>
-            <select id="product" name="product" required>
-                <option value="" disabled selected>Select a Product ...</option>
-                <!-- Options populated by JS -->
-            </select>
+  <header class="header">
+    <h1>Product Review</h1>
+  </header>
 
-            <!-- Overall Rating -->
-            <fieldset>
-                <legend>Overall Rating:</legend>
-                <label><input type="radio" name="rating" id="star1" value="1" required> ☆ 1</label>
-                <label><input type="radio" name="rating" id="star2" value="2"> ☆☆ 2</label>
-                <label><input type="radio" name="rating" id="star3" value="3"> ☆☆☆ 3</label>
-                <label><input type="radio" name="rating" id="star4" value="4"> ☆☆☆☆ 4</label>
-                <label><input type="radio" name="rating" id="star5" value="5"> ☆☆☆☆☆ 5</label>
-            </fieldset>
+  <main class="container">
+    <form>
 
-            <!-- Date of Installation -->
-            <label for="installDate">Date of Installation:</label>
-            <input type="date" id="installDate" name="installDate" required>
+      <label>Product Name</label>
+      <select>
+        <option>Choose a Product ...</option>
+        <option>Product A</option>
+        <option>Product B</option>
+      </select>
 
-            <!-- Useful Features -->
-            <fieldset>
-                <legend>Useful Features:</legend>
-                <label><input type="checkbox" id="feature1" name="features" value="Feature1"> Feature 1</label>
-                <label><input type="checkbox" id="feature2" name="features" value="Feature2"> Feature 2</label>
-                <label><input type="checkbox" id="feature3" name="features" value="Feature3"> Feature 3</label>
-            </fieldset>
+      <label>Overall Rating</label>
+      <div class="rating">
+        <label><input type="radio" name="rate"> ★</label>
+        <label><input type="radio" name="rate"> ★★</label>
+        <label><input type="radio" name="rate"> ★★★</label>
+        <label><input type="radio" name="rate"> ★★★★</label>
+        <label><input type="radio" name="rate"> ★★★★★</label>
+      </div>
 
-            <!-- Written Review -->
-            <label for="reviewText">Written Review:</label>
-            <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here..."></textarea>
+      
+      <label>Date of Installation</label>
+      <input type="date">
 
-            <!-- User Name -->
-            <label for="userName">Your Name (optional):</label>
-            <input type="text" id="userName" name="userName" placeholder="Enter your name">
+      
+      <label>
+        Which features did you find useful in the product?
+        <span class="italic">(Check all that apply)</span>
+      </label>
 
-            <!-- Submit -->
-            <input type="submit" value="Submit Review">
-
-        </form>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Akos Fragrance. All rights reserved.</p>
-    </footer>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Durability</label>
+        <label><input type="checkbox"> Ease of Use</label>
+        <label><input type="checkbox"> Performance</label>
+        <label><input type="checkbox"> Design</label>
+      </div>
 
     
+      <label>Written Review <span class="optional">(Optional)</span></label>
+      <textarea></textarea>
+
+      
+      <label>Your Name <span class="optional">(Optional)</span></label>
+      <input type="text">
+
+      
+      <button type="submit">Post Review</button>
+
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>©2026 🌸 Antwiwaah Stephanie🌸 Ghana</p>
+    <p>Last updated: <span id="date"></span></p>
+  </footer>
+
 </body>
-</html>
