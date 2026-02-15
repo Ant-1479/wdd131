@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the home page of Akos Fragrance website.">
+    <meta name="author" content="Antwiwaah Stephanie">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>  Akos fragrance Home page </title>
+</head>
+<body>
+
+<header class="navbar">
+ <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+    
+<img src="images/logo.png" alt="Akos Fragrance Logo" class="logo">
+
+  <div class="icons">
+    🔍 
+  </div>
+
+  <nav>
+  
+    <a href="index.html">Shop</a>
+    <a href="Collections.html">Collections</a>
+    <a href="About.html">About</a>
+
+  </nav>
+
+</header>
+
+
+  <div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <a href="#" class="btn">View Full Collection</a>
+  </div>
+</div>
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search collections...">
+</div>
+
+  <section class="collections-hero">
+    <div class="hero-content">
+      <h1>Akos Collections</h1>
+      <p>Each collection tells a story. Each scent leaves a mark.</p>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="filter-bar">
+    <button class="filter active">All</button>
+    <button class="filter">Signature</button>
+    <button class="filter">Luxury</button>
+    <button class="filter">Limited</button>
+  </section>
+
+  <!-- Collections Grid -->
+  <section class="collections-grid">
+
+    <!-- Card -->
+    <article class="collection-card">
+      <div class="image-box">
+        <img src="images/7.png" alt="Signature Collection">
+        <div class="overlay">
+          <a href="#">View Collection</a>
+        </div>
+      </div>
+
+      <div class="collection-details">
+        <h2>Signature Collection</h2>
+        <p class="tagline">Effortless. Timeless. Everyday luxury.</p>
+
+        <div class="stats">
+          <span>🌿 Fresh</span>
+          <span>🔥 Medium</span>
+          <span>⏳ Long-lasting</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card -->
+    <article class="collection-card">
+      <div class="image-box">
+        <img src="images/8.png" alt="Luxury Collection">
+        <div class="overlay">
+          <a href="#">View Collection</a>
+        </div>
+      </div>
+
+      <div class="collection-details">
+        <h2>Luxury Collection</h2>
+        <p class="tagline">Bold scents crafted for powerful presence.</p>
+
+        <div class="stats">
+          <span>🌑 Deep</span>
+          <span>🔥🔥 Strong</span>
+          <span>🕯 Evening</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card -->
+    <article class="collection-card">
+      <div class="image-box">
+        <img src="images/5.png" alt="Limited Edition">
+        <div class="overlay">
+          <a href="#">View Collection</a>
+        </div>
+      </div>
+
+      <div class="collection-details">
+        <h2>Limited Edition</h2>
+        <p class="tagline">Rare creations. No second chances.</p>
+
+        <div class="stats">
+          <span>💎 Exclusive</span>
+          <span>🧪 Experimental</span>
+          <span>⌛ Limited</span>
+        </div>
+      </div>
+    </article>
+    </section>
+   
+
+<footer>
+ <p id="copyright">© 2026 Obeng Antwiwaah Stephanie. All rights reserved.</p>
+            <p>Last updated: <span id="date"></span></p>
+  <div>Instagram • Twitter • WhatsApp</div>
+
+</footer>
+</body>
+</html>
+
